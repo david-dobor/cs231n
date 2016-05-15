@@ -1,0 +1,29 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IPython Notebook
+.ipynb_checkpoints
+
+# Pycharm
+.idea/
+
+# Data Directories
+datasets/
+
+# Other
+.cache
+*.log
+
+# Mac Stuff
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+
+# Thumbnails
+._*
