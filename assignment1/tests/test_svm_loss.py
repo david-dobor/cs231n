@@ -2,6 +2,7 @@
 import numpy as np
 import time
 
+
 def svm_loss_naive(scores, y):
     """ Computes svm hinge loss based on scores and class labels - naive implementation.
 
@@ -118,35 +119,6 @@ print 'result is: {}'.format(temp)
 print 'ratio of times (naive over vevtorized): {}'.format(t_naive / t_vectorized)
 
 
-##################################################################################
-# In the above we passed in some artificial scores to the functions for testing. #
-# In real life, and for this assignment, we actuall compute the scores based on  #
-# W's and x's. In the following we do this computation with artificial data.     #
-##################################################################################
-
-##################################################################################
-#     create some artificial data: matrix W, input vector X. Compute scores.     #
-##################################################################################
-"""
-print '\nNow on to computing the scores...\n'
-
-W = np.array([[0.01, -0.05, 0.1, 0.05],
-              [0.7, 0.2, 0.05, 0.16],
-              [0.0, -.45, -0.2, 0.03]])
-print '\n    The weights are: \n\n{}'.format(W)
-print '\n      W.shape is {}'.format(W.shape)
-
-X = np.array([-15, 22, -44, 56]); #X.shape = (4, 1)
-print '\n      X.shape is {}'.format(X.shape)
-print '      The input vector X is: \n\n{}'.format(X); print '\n'
-
-
-# Apply W to X to compute the score vector (i.e. W X = s)
-s = W.dot(X)
-print '\n    The vector s of scores works out to be: \n{}'.format(s); print '\n'
-print '\n      s.shape is {}\n'.format(s.shape)
-
-"""
 
 
 
