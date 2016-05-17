@@ -3,6 +3,8 @@
 import random
 import numpy as np
 from cs231n.data_utils import load_CIFAR10
+import linear_svm2 as svm2
+import linear_svm as svm
 
 # Load the raw CIFAR-10 data.
 cifar10_dir = 'cs231n/datasets/cifar-10-batches-py'
@@ -94,7 +96,8 @@ import time
 # generate a random SVM weight matrix of small numbers
 W = np.random.randn(3073, 10) * 0.0001
 
-loss, grad = svm_loss_naive(W, X_dev, y_dev, 0.00001)
+#loss, grad = svm2.svm_loss_naive(W.T, X_dev.T, y_dev, 0.00001)
+loss, grad = svm.svm_loss_naive(W, X_dev, y_dev, 0.00001)
 print 'loss: %f' % (loss, )
 
 print grad

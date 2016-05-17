@@ -40,7 +40,7 @@ def svm_loss_vectorized(W, X, y, reg=0):
     num_train = X.shape[1]
     scores = W.dot(X)
 
-    correct_scores = scores[np.arange(len(y)), y]
+    correct_scores = scores[y, np.arange(len(y))]
 
     margins = scores - correct_scores + 1
 

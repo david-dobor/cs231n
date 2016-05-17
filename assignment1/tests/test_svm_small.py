@@ -9,7 +9,7 @@ def svm_loss_naive(W, X, y, reg=0):
     num_train = X.shape[1]
     loss = 0.0
     for i in xrange(num_train):
-        scores = W.dot(X[:, i])
+        scores = W.dot(X[:,i])
         correct_class_score = scores[y[i]]
         for j in xrange(num_classes):
             if j == y[i]:
