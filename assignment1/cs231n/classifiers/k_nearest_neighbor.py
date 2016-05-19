@@ -12,8 +12,8 @@ class KNearestNeighbor(object):
     memorizing the training data.
 
     Inputs:
-    - X: A numpy array of shape (num_train, D) containing the training data
-      consisting of num_train samples each of dimension D.
+    - X: A numpy array of shape (n_train, D) containing the training data
+      consisting of n_train samples each of dimension D.
     - y: A numpy array of shape (N,) containing the training labels, where
          y[i] is the label for X[i].
     """
@@ -56,7 +56,7 @@ class KNearestNeighbor(object):
     - X: A numpy array of shape (num_test, D) containing test data.
 
     Returns:
-    - dists: A numpy array of shape (num_test, num_train) where dists[i, j]
+    - dists: A numpy array of shape (num_test, n_train) where dists[i, j]
       is the Euclidean distance between the ith test point and the jth training
       point.
     """
@@ -133,7 +133,7 @@ class KNearestNeighbor(object):
     predict a label for each test point.
 
     Inputs:
-    - dists: A numpy array of shape (num_test, num_train) where dists[i, j]
+    - dists: A numpy array of shape (num_test, n_train) where dists[i, j]
       gives the distance betwen the ith test point and the jth training point.
 
     Returns:

@@ -27,3 +27,6 @@ Icon
 
 # Thumbnails
 ._*
+
+# my odd files
+*.pptx

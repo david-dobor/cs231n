@@ -25,7 +25,7 @@ mask = range(num_training, num_training + num_validation)
 X_val = X_train[mask]
 y_val = y_train[mask]
 
-# Our training set will be the first num_train points from the original
+# Our training set will be the first n_train points from the original
 # training set.
 mask = range(num_training)
 X_train = X_train[mask]

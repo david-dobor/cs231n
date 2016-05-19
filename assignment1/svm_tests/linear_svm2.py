@@ -36,7 +36,7 @@ def svm_loss_naive(W, X, y, reg):
         dW[j,:] += X[:,i].T # sums each contribution of the x_i's
 
   # Right now the loss is a sum over all training examples, but we want it
-  # to be an average instead so we divide by num_train.
+  # to be an average instead so we divide by n_train.
   loss /= num_train
 
   # Same with gradient
@@ -77,7 +77,7 @@ def svm_loss_vectorized(W, X, y, reg):
   # Slow, sadly:
   # correct_scores = np.diag(scores[y,:])
   # Fast (index in both directions):
-  correct_scores = scores[y, np.arange(num_train)] # using the fact that all elements in y are < C == num_classes
+  correct_scores = scores[y, np.arange(num_train)] # using the fact that all elements in y are < C == n_classes
 
   mat = scores - correct_scores + 1 # like above, delta = 1
   mat[y, np.arange(num_train)] = 0 # accounting for the j=y_i term we shouldn't count (subtracting 1 makes up for it since w_j = w_{y_j} in this case)
